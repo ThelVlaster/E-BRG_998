@@ -357,7 +357,7 @@
                         tbl.clear().draw();
 
                         $.each(data.iDetails, function(key, val){
-                          alert(val.ItemTypeID);
+                          //alert(val.ItemTypeID);
                           tbl.row.add([
                             '<input type = "hidden" value = "'+val.DateTime+'">',
                             val.ItemCode+' - ' + val.ItemID,
@@ -392,16 +392,21 @@
 
 
 
-                  $('#btnUpdate').click(function(){
+                  $('#btnUpdate').click(function(e){
                     $('#Messages1').html('');
+
+                    var tID = $('#etxtTypeID').val();
+                    var origID = $('#etxtOrigID').val();
+                    var itemID = $('#etxtID').val();
+                    var itemStatus = $('#etxtStatus').val();
                     
                     $.ajax({
                       type: 'POST',
                       url: 'updateItemDetails',
-                      data: { tID: $('#etxtTypeID').val(),
-                              origID: $('#etxtOrigID').val(),
-                              itemID: $('#etxtID').val(),
-                              itemStatus: $('#etxtStatus').val() },
+                      data: { tID: tID,
+                              origID: origID,
+                              itemID: itemID,
+                              itemStatus: itemStatus },
                       dataType: 'JSON',
                       success: function(data){
 
@@ -420,7 +425,7 @@
                         });
 
                         if (data.messages != null) {
-                        //alert(JSON.stringify(data.messages));
+                        alert(JSON.stringify(data.messages));
                         
 
                             $('#Messages1').append('<div class="alert alert-danger alert-dismissible"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4><i class="icon fa fa-ban"></i> Warning!</h4><b></b></div>');  

@@ -193,22 +193,22 @@ $loginInfo = DB::table('tblofficialaccount')
 			'etxtID.numeric' => 'º Quantity accepts NUMBERS only.',
 			'etxtStatus.required' => 'º Item Type is required.'
 			);
-		$v = Validator::make($post,
-				[
-					'etxtID'	=>'required|numeric',
-					'etxtStatus'	=>'required'
-				],$messages);
+		// $v = Validator::make($post,
+		// 		[
+		// 			'etxtID'	=>'required|numeric',
+		// 			'etxtStatus'	=>'required'
+		// 		],$messages);
 
-		$iDetails = DB::table('tblitemdetails')
-				->where('ItemStatus', '=', 'active')
-				->get();
+		// $iDetails = DB::table('tblitemdetails')
+		// 		->where('ItemStatus', '=', 'active')
+		// 		->get();
 
-			if($v->fails()){
+		// 	if($v->fails()){
 
-				return  Response::json( array(	'iDetails' => $iDetails, 'messages' => $v->errors() ));
+		// 		return  Response::json( array(	'iDetails' => $iDetails, 'messages' => $v->errors() ));
 
-			}
-			else{
+		// 	}
+		// 	else{
 		if(Request::ajax())
 		{
 			DB::table('tblitemdetails')
@@ -229,7 +229,7 @@ $loginInfo = DB::table('tblofficialaccount')
 
 			return Response::json(array('uDetails' => $uDetails));
 		}
-	}
+	// }
 	
 }
 	public function deleteRecord()
