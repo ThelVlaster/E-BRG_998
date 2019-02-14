@@ -56,12 +56,12 @@ class RegisterController extends BaseController {
 							));	
 
 					return Redirect::to('/')
-						->with('messageLogin', 'Success! the account has been added');
+						->with('messageLogin', 'Success! the account has been added.');
 				}
 				else
 				{
 					return Redirect::to('register')
-						->with('message', 'Passwords are not the same');
+						->with('message', 'Passwords are not the same.');
 				}
 			}
 			else
@@ -76,7 +76,7 @@ class RegisterController extends BaseController {
 		else
 		{
 			return Redirect::to('register')
-				->with('message', 'Details does not exist');
+				->with('message', 'Error! Only a registered resident official can make an account.');
 
 		}
 	}
