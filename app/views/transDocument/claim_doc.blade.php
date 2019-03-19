@@ -151,7 +151,8 @@
                                 <button onclick = "sendMail({{$info->RequestID}}, 'Reg', {{$info->RFType}})" class="btn btn-block btn-sm btn-success btn-flat"><i class="fa fa-send"></i></button
                                 >
                                  @elseif($info->DocReqStatus == "Claimed")
-                                <button data-toggle="modal" data-target = "#claim" value="{{$info->RequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalClaim(this, 'Reg')" disabled><i class="fa fa-check-circle"></i></button><button data-toggle="modal" data-target = "#print" value="{{$info->RequestID}}"  class="btn btn-sm btn-block btn-primary btn-flat" onclick = "modalPrint(this, 'Reg')"><i class="fa fa-print"></i></button><button onclick = "sendMail({{$info->RequestID}}, 'Reg', {{$info->RFType}})" class="btn btn-block btn-sm btn-success btn-flat"><i class="fa fa-send"></i></button>
+                                <button data-toggle="modal" data-target = "#claim" value="{{$info->RequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalClaim(this, 'Reg')" disabled><i class="fa fa-check-circle"></i></button><button data-toggle="modal" data-target = "#print" value="{{$info->RequestID}}"  class="btn btn-sm btn-block btn-primary btn-flat" onclick = "modalPrint(this, 'Reg')"><i class="fa fa-print"></i></button>
+                               <!-- <button onclick = "sendMail({{$info->RequestID}}, 'Reg', {{$info->RFType}})" class="btn btn-block btn-sm btn-success btn-flat"><i class="fa fa-send"></i></button> -->
                                 @endif
                           </td>
                         </tr>
@@ -194,7 +195,8 @@
                             @elseif($info->BusDocStatus == "Printed")
                             <button data-toggle="modal" data-target = "#claim" value="{{$info->BusRequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalClaim(this, 'Bus')"><i class="fa fa-check-circle"></i></button><button data-toggle="modal" data-target = "#print" value="{{$info->BusRequestID}}" onclick = "modalPrint(this, 'Bus')" class="btn btn-sm btn-block btn-primary btn-flat" disabled><i class="fa fa-print"></i></button><button  onclick = "sendMail({{$info->BusRequestID}}, 'Bus')" class="btn btn-sm btn-block btn-success btn-flat"><i class="fa fa-send"></i></a>
                              @elseif($info->BusDocStatus == "Claimed")
-                              <button data-toggle="modal" data-target = "#claim" value="{{$info->BusRequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalClaim(this, 'Bus')" disabled><i class="fa fa-check-circle"></i></button><button data-toggle="modal" data-target = "#print" value="{{$info->BusRequestID}}" onclick = "modalPrint(this, 'Bus')" class="btn btn-sm btn-block btn-primary btn-flat"><i class="fa fa-print"></i></button><button  onclick = "sendMail({{$info->BusRequestID}}, 'Bus')" class="btn btn-sm btn-block btn-success btn-flat"><i class="fa fa-send"></i></button>
+                              <button data-toggle="modal" data-target = "#claim" value="{{$info->BusRequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalClaim(this, 'Bus')" disabled><i class="fa fa-check-circle"></i></button><button data-toggle="modal" data-target = "#print" value="{{$info->BusRequestID}}" onclick = "modalPrint(this, 'Bus')" class="btn btn-sm btn-block btn-primary btn-flat"><i class="fa fa-print"></i></button>
+                              <!-- <button  onclick = "sendMail({{$info->BusRequestID}}, 'Bus')" class="btn btn-sm btn-block btn-success btn-flat"><i class="fa fa-send"></i></button> -->
                               @endif
 
                           </td>

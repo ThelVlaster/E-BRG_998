@@ -129,7 +129,8 @@
                           </td>
 
                           <td>
-                            <!-- <a  href="<?php //echo 'docSummary' ?>?ReqID={{$info->RequestID}}" class = "btn btn-danger btn-xs btn-flat"><i class="fa fa-money"></i></a> --><button data-toggle="modal" data-target = "#cancel" value="{{$info->RequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalCancel(this)"><i class="fa fa-ban"></i></button><button onclick = "sendMail({{$info->RequestID}}, 'Reg', {{$info->RFType}})" class="btn btn-block btn-sm btn-success btn-flat"><i class="fa fa-send"></i></button>
+                            <!-- <a  href="<?php //echo 'docSummary' ?>?ReqID={{$info->RequestID}}" class = "btn btn-danger btn-xs btn-flat"><i class="fa fa-money"></i></a> --><button data-toggle="modal" data-target = "#cancel" value="{{$info->RequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalCancel(this)"><i class="fa fa-ban"></i></button>
+                            <!--<button onclick = "sendMail({{$info->RequestID}}, 'Reg', {{$info->RFType}})" class="btn btn-block btn-sm btn-success btn-flat"><i class="fa fa-send"></i></button> -->
 
                             
                           </td>

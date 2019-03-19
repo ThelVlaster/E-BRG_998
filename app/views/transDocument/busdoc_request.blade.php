@@ -111,7 +111,8 @@
                             @endforeach
                           </td>
                           <td>
-                            <button data-toggle="modal" data-target = "#cancel" value="{{$info->BusRequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalCancel(this)"><i class="fa fa-ban"></i><button  onclick = "sendMail({{$info->BusRequestID}}, 'Bus')" class="btn btn-sm btn-block btn-success btn-flat"><i class="fa fa-send"></i></button>
+                            <button data-toggle="modal" data-target = "#cancel" value="{{$info->BusRequestID}}" class = "btn btn-block btn-danger btn-sm btn-flat" onclick = "modalCancel(this)"><i class="fa fa-ban"></i>
+                              <!-- <button  onclick = "sendMail({{$info->BusRequestID}}, 'Bus')" class="btn btn-sm btn-block btn-success btn-flat"><i class="fa fa-send"></i></button> -->
                           </td> 
                         </tr>
                         @endforeach

@@ -25,7 +25,7 @@
             <button type="submit" id="btnAllLogs" style="margin-left: 950px" class="btn btn-primary ">View All Logs</button>
           </div>
         <br>
-        
+          <!--
             <div class="col-md-12 form-inline " style="margin-left: 80px; margin-bottom: 35px">
              
               <label style="margin-left: 0px">Select Position</label>
@@ -42,7 +42,7 @@
                 <select type="text" style="width: 200px" class="form-control" id="dropRange" name="dropRange" >
 
                 </select>
-             
+             -->
               </div>
             
         <table id="example1" class="table table-bordered table-striped">

@@ -509,7 +509,7 @@
                               hhtype: hhtype},
                       dataType: 'JSON',
                       success: function(data){
-                        //window.location.href = "{{URL::to('householdDetails')}}";
+                        window.location.href = "{{URL::to('householdDetails')}}";
 
                       if (data.messages != null) {
                         //alert(JSON.stringify(data.messages));

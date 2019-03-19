@@ -401,7 +401,7 @@ $('#btnPenalty').click(function(){
               },
           dataType: 'JSON',
           success:function(data){
-              alert("Success!");
+              //alert("Success!");
 
             $.each(data.issueType, function(key, val){
                       $.ajax({
